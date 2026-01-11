@@ -34,8 +34,7 @@ MSA 구조를 기반으로 인터넷 서점을 만들었습니다.
 - RabbitMQ 기반 upsert/delete + retry\DLQ 운영 설계 및 구현
 - Redis 캐시 (검색 캐시 / 할인 정책 캐시) 전략 수립
 
----
-### 검색 관련 핵심 기능
+#### 검색 관련 핵심 기능
 1) 검색
    - Elasticsearch 기반 키워드 검색(BM25)
    - 임베딩이 유효한 경우에만 Vector KNN을 결합한 **하이브리드 검색**
@@ -50,8 +49,6 @@ MSA 구조를 기반으로 인터넷 서점을 만들었습니다.
    - (AI 검색) Komoran 기반 **의미 중심 캐시 키** 생성: 키워드 추출 + 정렬(가나다 순) + Redis 저장
    - (할인정책) 5분 주기 갱신 + TTL 10분, 5분 사이 비활성화 된 정책은 삭제 반영
   
----
-
 ### Link
 - 프로젝트 링크: [https://github.com/nhnacademy-be12-daiso](https://github.com/nhnacademy-be12-daiso)
 - Wiki (Decision Log) : [https://github.com/nhnacademy-be12-daiso/booksearch-worker/wiki/Decision-Log](https://github.com/nhnacademy-be12-daiso/booksearch-worker/wiki/Decision-Log)
